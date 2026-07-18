@@ -1,0 +1,14 @@
+{
+  "name": "zing-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "build": "npm run build --workspace=apps/web",
+    "test:stellar": "npx ts-node --project packages/stellar/tsconfig.json packages/stellar/src/__tests__/stellar.test.ts"
+  }
+}
