@@ -63,7 +63,7 @@ export async function submitTx(signedXdr: string) {
     throw new Error(`Transaction failed on-chain. Please check inputs or contract logic.`);
   }
   
-  return statusResponse;
+  return { ...statusResponse, hash: response.hash };
 }
 
 /**
