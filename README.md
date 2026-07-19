@@ -50,6 +50,16 @@ By utilizing Stellar's near-zero fee, high-throughput ledger and Soroban's rust-
 
 ---
 
+## Deployed Contract Information
+
+- **Live Demo Link:** [http://localhost:3000](http://localhost:3000)
+- **Zing Terminal & Routing Contract:** `<INSERT_YOUR_CONTRACT_ID_HERE>`
+- **Zing Campaign/Competitions Contract:** `<INSERT_YOUR_CONTRACT_ID_HERE>`
+- **Network:** Stellar Testnet
+- **Soroban RPC URL:** `https://soroban-testnet.stellar.org`
+
+---
+
 ## Architecture Flow
 
 Zing's architecture merges off-chain intent formation with on-chain deterministic execution on Stellar.
