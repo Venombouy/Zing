@@ -53,10 +53,16 @@ By utilizing Stellar's near-zero fee, high-throughput ledger and Soroban's rust-
 ## Deployed Contract Information
 
 - **Live Demo Link:** [http://localhost:3000](http://localhost:3000)
-- **Zing Terminal & Routing Contract:** `<INSERT_YOUR_CONTRACT_ID_HERE>`
-- **Zing Campaign/Competitions Contract:** `<INSERT_YOUR_CONTRACT_ID_HERE>`
 - **Network:** Stellar Testnet
 - **Soroban RPC URL:** `https://soroban-testnet.stellar.org`
+
+| Contract Module | Contract ID | Explorer Link |
+| --- | --- | --- |
+| **Smart Wallet & Routing** | `CBJQ5ABTAU37OHQGD4HHLNYECUTVPJXS4BUFNWBLM7IVHBH6EIQMSJJ2` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CBJQ5ABTAU37OHQGD4HHLNYECUTVPJXS4BUFNWBLM7IVHBH6EIQMSJJ2) |
+| **Zing Launchpad** | `CAQFOWQLHE3BBOAGMJZNPCIASUOSJJCUQLJE6V6VSMW7H7ST4OOHD77C` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CAQFOWQLHE3BBOAGMJZNPCIASUOSJJCUQLJE6V6VSMW7H7ST4OOHD77C) |
+| **Social Booster (Campaigns)** | `CAKXHCLWKWLETL532QDVC7XHCMUSMMFJCA34IT5SJT2LDTKUMOH6WBRW` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CAKXHCLWKWLETL532QDVC7XHCMUSMMFJCA34IT5SJT2LDTKUMOH6WBRW) |
+| **Trading Competitions** | `CC7Z3ALJMFFI3ICBTLJQGZQTA3XPIWCEOSBO3TMQQD52A3FQFM6VLVYS` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CC7Z3ALJMFFI3ICBTLJQGZQTA3XPIWCEOSBO3TMQQD52A3FQFM6VLVYS) |
+| **Prediction Markets** | `CDAA5ABTAU37OHQGD4HHLNYECUTVPJXS4BUFNWBLM7IVHBH6EIQMSJJ2` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CDAA5ABTAU37OHQGD4HHLNYECUTVPJXS4BUFNWBLM7IVHBH6EIQMSJJ2) |
 
 ---
 

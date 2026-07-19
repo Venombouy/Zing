@@ -78,12 +78,12 @@ async function deployContract(wasmName) {
 
   // Create Contract
   account.incrementSequenceNumber();
-  const createTx = new TransactionBuilder(account, { fee: "100000", networkPassphrase: NETWORK_PASSPHRASE })
+  const createTx = new TransactionBuilder(account, { fee: "2000000", networkPassphrase: NETWORK_PASSPHRASE })
     .addOperation(Operation.createCustomContract({
       address: Address.fromString(deployer.publicKey()),
       wasmHash: Buffer.from(wasmId, 'hex')
     }))
-    .setTimeout(60)
+    .setTimeout(120)
     .build();
 
   const createRes = await submitTx(createTx, deployer);
@@ -101,10 +101,12 @@ async function main() {
     const campaignId = await deployContract('zing_campaign.wasm');
     const competitionId = await deployContract('zing_competition.wasm');
     const launchpadId = await deployContract('zing_launchpad.wasm');
+    const smartWalletId = await deployContract('zing_smart_wallet.wasm');
+    const predictionMarketId = await deployContract('zing_prediction_market.wasm');
     
     // Save to env
-    const envContent = `NEXT_PUBLIC_CAMPAIGN_CONTRACT=${campaignId}\nNEXT_PUBLIC_COMPETITION_CONTRACT=${competitionId}\nNEXT_PUBLIC_LAUNCHPAD_CONTRACT=${launchpadId}\n`;
-    fs.writeFileSync(path.join(__dirname, '..', '..', '..', 'zing-web', '.env.local'), envContent, { flag: 'a' });
+    const envContent = `\nNEXT_PUBLIC_CAMPAIGN_CONTRACT=${campaignId}\nNEXT_PUBLIC_COMPETITION_CONTRACT=${competitionId}\nNEXT_PUBLIC_LAUNCHPAD_CONTRACT=${launchpadId}\nNEXT_PUBLIC_SMART_WALLET_CONTRACT=${smartWalletId}\nNEXT_PUBLIC_PREDICTION_MARKET_CONTRACT=${predictionMarketId}\n`;
+    fs.writeFileSync(path.join(__dirname, '..', '..', '..', '.env.local'), envContent, { flag: 'a' });
     console.log("Saved to .env.local successfully!");
   } catch(e) {
     console.error("Deployment failed:", e);
