@@ -5,7 +5,7 @@
 [![Network](https://img.shields.io/badge/Network-Stellar%20Testnet-blue)](https://stellar.org)
 [![Status](https://img.shields.io/badge/Status-Phase%201%20Live-brightgreen)]()
 
-[![Smart Wallet](https://img.shields.io/badge/Smart%20Wallet-Contract-purple)](https://stellar.expert/explorer/testnet/contract/CAMVCRCMROO524FBV6IJYPB6BIOR2OR7DVCRMLQJ5QZB2JDOP6GMIO2X)
+[![Smart Wallet](https://img.shields.io/badge/Smart%20Wallet-Contract-purple)](https://stellar.expert/explorer/testnet/contract/CDTQYDT2EJ7WAIMGY33546CKKS46MP2CBSL5QNCXFNQTHL5EL7GPYLAY)
 [![Launchpad](https://img.shields.io/badge/Launchpad-Contract-purple)](https://stellar.expert/explorer/testnet/contract/CBTKEHDZLL5ICZFFHF7SKNJUAO6H2D337T2ROVOJUPFP3KT2MQGO7VTJ)
 [![Campaigns](https://img.shields.io/badge/Campaigns-Contract-purple)](https://stellar.expert/explorer/testnet/contract/CBDNXFONMLWTIQLSFONXDDTBIPWZ7LRV7BLAMYEA4K37IAETH424IOWC)
 [![Competitions](https://img.shields.io/badge/Competitions-Contract-purple)](https://stellar.expert/explorer/testnet/contract/CAHXXMYINOBWAAYBHETS6C5NKX4S4F4OHWV7EFLX6PY7QB3RCSQMQO2T)
@@ -63,7 +63,7 @@ By utilizing Stellar's near-zero fee, high-throughput ledger and Soroban's rust-
 
 | Contract Module | Contract ID | Explorer Link |
 | --- | --- | --- |
-| **Smart Wallet & Routing** | `CAMVCRCMROO524FBV6IJYPB6BIOR2OR7DVCRMLQJ5QZB2JDOP6GMIO2X` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CAMVCRCMROO524FBV6IJYPB6BIOR2OR7DVCRMLQJ5QZB2JDOP6GMIO2X) |
+| **Smart Wallet & Routing** | `CDTQYDT2EJ7WAIMGY33546CKKS46MP2CBSL5QNCXFNQTHL5EL7GPYLAY` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CDTQYDT2EJ7WAIMGY33546CKKS46MP2CBSL5QNCXFNQTHL5EL7GPYLAY) |
 | **Zing Launchpad** | `CBTKEHDZLL5ICZFFHF7SKNJUAO6H2D337T2ROVOJUPFP3KT2MQGO7VTJ` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CBTKEHDZLL5ICZFFHF7SKNJUAO6H2D337T2ROVOJUPFP3KT2MQGO7VTJ) |
 | **Social Booster (Campaigns)** | `CBDNXFONMLWTIQLSFONXDDTBIPWZ7LRV7BLAMYEA4K37IAETH424IOWC` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CBDNXFONMLWTIQLSFONXDDTBIPWZ7LRV7BLAMYEA4K37IAETH424IOWC) |
 | **Trading Competitions** | `CAHXXMYINOBWAAYBHETS6C5NKX4S4F4OHWV7EFLX6PY7QB3RCSQMQO2T` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CAHXXMYINOBWAAYBHETS6C5NKX4S4F4OHWV7EFLX6PY7QB3RCSQMQO2T) |
