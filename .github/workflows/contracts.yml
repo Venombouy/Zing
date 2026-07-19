@@ -26,8 +26,5 @@ jobs:
     - name: Check Formatting
       run: cargo fmt -- --check
       
-    - name: Check Contracts Compile
-      run: cargo check --target wasm32-unknown-unknown
-      
     - name: Build Contracts (WASM)
       run: cargo build --target wasm32-unknown-unknown --release
