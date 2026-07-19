@@ -19,7 +19,7 @@ Zing is a **Stellar-first, chain-abstracted execution layer** architected to rep
 
 | Resource             | Value                                                      |
 | -------------------- | ---------------------------------------------------------- |
-| **Live Demo**        | [http://localhost:3000](http://localhost:3000) (Run locally) |
+| **Live Demo**        | [https://zingy-orpin.vercel.app/](https://zingy-orpin.vercel.app/) |
 | **Network**          | Stellar Testnet                                            |
 | **Soroban RPC**      | `https://soroban-testnet.stellar.org`                      |
 | **DEX Routing**      | Horizon Testnet API                                        |
@@ -57,7 +57,7 @@ By utilizing Stellar's near-zero fee, high-throughput ledger and Soroban's rust-
 
 ## Deployed Contract Information
 
-- **Live Demo Link:** [http://localhost:3000](http://localhost:3000)
+- **Live Demo Link:** [https://zingy-orpin.vercel.app/](https://zingy-orpin.vercel.app/)
 - **Network:** Stellar Testnet
 - **Soroban RPC URL:** `https://soroban-testnet.stellar.org`
 
@@ -225,7 +225,7 @@ npm install
 # Start the development server
 npm run dev
 ```
-Open `http://localhost:3000` with your browser to experience the Zing OS. Ensure you have the Freighter wallet extension installed and set to Testnet.
+Open `http://localhost:3000` (or visit the [live site](https://zingy-orpin.vercel.app/)) with your browser to experience the Zing OS. Ensure you have the Freighter wallet extension installed and set to Testnet.
 
 ---
 
