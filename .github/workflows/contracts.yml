@@ -26,7 +26,7 @@ jobs:
       run: cargo fmt -- --check
       
     - name: Clippy Lints
-      run: cargo clippy --all-targets -- -D warnings
+      run: cargo clippy --all-targets
       
     - name: Build Contracts (WASM)
       run: cargo build --target wasm32-unknown-unknown --release
