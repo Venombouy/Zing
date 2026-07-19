@@ -386,7 +386,7 @@ export default async function DashboardPage() {
                 </tr>
               </thead>
               <tbody>
-                {assets.map((row, i) => {
+                {assets.map((row: any, i: number) => {
                   const Icon = row.icon;
                   return (
                   <tr key={i} style={{ borderBottom: "1px solid rgba(255,255,255,0.02)", transition: "background 0.2s" }} className="row-hover">
