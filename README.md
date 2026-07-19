@@ -15,6 +15,44 @@ Zing is a **Stellar-first, chain-abstracted execution layer** architected to rep
 
 ---
 
+## 📸 Platform Preview
+> *A glimpse into the Zing chain-abstracted ecosystem.*
+
+### Landing Page
+> *The entry point to the Zing ecosystem.*
+![Landing Page](public/Screenshot/Landing%20Page.png)
+
+### Dashboard
+> *Your unified portfolio and ecosystem analytics hub.*
+![Dashboard](public/Screenshot/Dashboard.png)
+
+### Trade Terminal
+> *A professional-grade spot trading interface for Stellar assets.*
+![Trade Terminal](public/Screenshot/Trade%20Terminal.png)
+
+### Launch Board
+> *Discover and launch new tokens directly on Soroban.*
+![Launch Board](public/Screenshot/Launch%20Board.png)
+
+### Token Launch
+> *The ultimate one-stop process for deploying and minting your asset.*
+![Token Launch](public/Screenshot/Token%20Launch.png)
+
+### Token Creation Transaction
+> *Transaction signature directly through Freighter.*
+![Token Creation Transaction](public/Screenshot/Token%20Creation%20Transaction.png)
+
+### Wallet Connected & Token Bar
+> *Seamless non-custodial wallet integration and asset management.*
+![Wallet Connected](public/Screenshot/Wallet%20COnected.png)
+![Token Bar](public/Screenshot/Token%20Bar.png)
+
+### Swapped Transaction
+> *Intent-based swap success.*
+![Swapped Transaction](public/Screenshot/Swapped%20Transaction.png)
+
+---
+
 ## Live Deployment
 
 | Resource             | Value                                                      |
@@ -64,7 +102,7 @@ By utilizing Stellar's near-zero fee, high-throughput ledger and Soroban's rust-
 | Contract Module | Contract ID | Explorer Link |
 | --- | --- | --- |
 | **Smart Wallet & Routing** | `CDTQYDT2EJ7WAIMGY33546CKKS46MP2CBSL5QNCXFNQTHL5EL7GPYLAY` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CDTQYDT2EJ7WAIMGY33546CKKS46MP2CBSL5QNCXFNQTHL5EL7GPYLAY) |
-| **Zing Launchpad** | `CBTKEHDZLL5ICZFFHF7SKNJUAO6H2D337T2ROVOJUPFP3KT2MQGO7VTJ` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CBTKEHDZLL5ICZFFHF7SKNJUAO6H2D337T2ROVOJUPFP3KT2MQGO7VTJ) |
+| **Zing Launchpad** | `CCQKDOJRON3D4PZC4YNCTVMYR566VEPWYRFTF2JGFTO5EPZLJUBKKS46` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CCQKDOJRON3D4PZC4YNCTVMYR566VEPWYRFTF2JGFTO5EPZLJUBKKS46) |
 | **Social Booster (Campaigns)** | `CBDNXFONMLWTIQLSFONXDDTBIPWZ7LRV7BLAMYEA4K37IAETH424IOWC` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CBDNXFONMLWTIQLSFONXDDTBIPWZ7LRV7BLAMYEA4K37IAETH424IOWC) |
 | **Trading Competitions** | `CAHXXMYINOBWAAYBHETS6C5NKX4S4F4OHWV7EFLX6PY7QB3RCSQMQO2T` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CAHXXMYINOBWAAYBHETS6C5NKX4S4F4OHWV7EFLX6PY7QB3RCSQMQO2T) |
 | **Prediction Markets** | `CBY4WYAVM5ZGQYMJDMSJBRZDBWOELJAFM25IWCM2QJL6N6TYRI7W3N3I` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CBY4WYAVM5ZGQYMJDMSJBRZDBWOELJAFM25IWCM2QJL6N6TYRI7W3N3I) |
@@ -113,22 +151,37 @@ Zing utilizes a modern Next.js structure cleanly separating UI, domain logic, an
 Zing/
 ├── src/
 │   ├── app/                       # Next.js App Router (Pages & API)
+│   │   ├── about/                 # About Zing
+│   │   ├── api/                   # API Routes (Intents)
+│   │   ├── competitions/          # On-chain trading competitions
 │   │   ├── dashboard/             # Analytics and Portfolio view
-│   │   ├── trade/                 # Chain-abstracted Trading Terminal
 │   │   ├── launch/                # Token & Agent LaunchZone
+│   │   ├── settings/              # User settings
 │   │   ├── social-booster/        # Soroban-powered campaign manager
-│   │   └── competitions/          # On-chain trading competitions
+│   │   └── trade/                 # Chain-abstracted Trading Terminal
+│   │       └── predictions/       # Prediction markets
 │   │
 │   ├── components/                # Reusable UI components (Glassmorphic cards, Nav, WebGL)
 │   │   ├── ui/                    # Base UI elements (shadcn/radix)
-│   │   └── ...                    # Domain components (TradingChart, WalletProvider)
+│   │   └── webgl-liquid-utils/    # WebGL visual components
 │   │
 │   └── lib/                       # Core Web3 & Stellar Logic
 │       ├── stellar.ts             # Base Horizon config & network setup
 │       ├── stellar-trade.ts       # DEX swap builders, pathfinding, balance fetchers
-│       └── stellar-launch.ts      # Trustline and asset issuance transaction builders
+│       ├── stellar-launch.ts      # Trustline and asset issuance transaction builders
+│       ├── supabase.ts            # Supabase database client
+│       ├── wallet.ts              # Wallet integration logic
+│       └── utils.ts               # Assorted helpers
 │
-├── public/                        # Static assets (Logos, 3D backgrounds)
+├── contracts/                     # Soroban Smart Contracts Workspace
+│   ├── launchpad/                 # Token Launchpad & Factory
+│   ├── token/                     # Standard Soroban Token implementation
+│   ├── campaign/                  # Social Booster campaigns
+│   ├── competition/               # Trading competitions
+│   ├── prediction_market/         # Prediction markets
+│   └── smart_wallet/              # Account abstraction
+│
+├── public/                        # Static assets (Logos, 3D backgrounds, Screenshots)
 ├── package.json                   # Dependencies (lightweight-charts, stellar-sdk, etc.)
 └── tailwind.config.ts             # Theme and styling configuration
 ```
