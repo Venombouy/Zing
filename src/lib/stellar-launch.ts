@@ -54,7 +54,7 @@ export async function submitTx(signedXdr: string) {
   }
   
   let statusResponse = await sorobanServer.getTransaction(response.hash);
-  while (statusResponse.status === "NOT_FOUND" || statusResponse.status === "PENDING") {
+  while (statusResponse.status === "NOT_FOUND" || (statusResponse.status as string) === "PENDING") {
     await new Promise(resolve => setTimeout(resolve, 2000));
     statusResponse = await sorobanServer.getTransaction(response.hash);
   }
