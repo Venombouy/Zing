@@ -151,8 +151,8 @@ export default function ContractsClient({ initialContracts }: { initialContracts
                 <input 
                   type="text" 
                   value={selectedContract} 
-                  readOnly
-                  style={{ width: "100%", background: "#09090B", border: "1px solid #27272A", padding: "10px", borderRadius: "6px", color: "#52525B", fontSize: "12px", fontFamily: "var(--font-geist-mono)" }}
+                  onChange={e => setSelectedContract(e.target.value)}
+                  style={{ width: "100%", background: "#09090B", border: "1px solid #27272A", padding: "10px", borderRadius: "6px", color: "#F4F4F5", fontSize: "12px", fontFamily: "var(--font-geist-mono)" }}
                 />
               </div>
 
