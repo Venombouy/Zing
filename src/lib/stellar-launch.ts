@@ -44,12 +44,26 @@ export async function buildTrustlineTx(distributorPubKey: string, assetCode: str
 }
 
 /**
- * Submits a signed XDR transaction to Horizon.
+ * Submits a signed XDR transaction to Soroban RPC and polls for completion.
  */
 export async function submitTx(signedXdr: string) {
   const tx = TransactionBuilder.fromXDR(signedXdr, Networks.TESTNET);
-  const response = await server.submitTransaction(tx);
-  return response;
+  const response = await sorobanServer.sendTransaction(tx);
+  if (response.status === "ERROR") {
+    throw new Error(`Transaction submission failed: ${JSON.stringify(response.errorResult)}`);
+  }
+  
+  let statusResponse = await sorobanServer.getTransaction(response.hash);
+  while (statusResponse.status === "NOT_FOUND" || statusResponse.status === "PENDING") {
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    statusResponse = await sorobanServer.getTransaction(response.hash);
+  }
+  
+  if (statusResponse.status === "FAILED") {
+    throw new Error(`Transaction failed on-chain. Please check inputs or contract logic.`);
+  }
+  
+  return statusResponse;
 }
 
 /**
